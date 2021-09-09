@@ -29,14 +29,14 @@
 
 
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName">
+        <input type="text" id="firstName" name="firstName" required placeholder="First Name">
 
         <div>
 
             
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" value="mail@mail.com">
 
         </div>
             
@@ -86,19 +86,56 @@
 
         </div>
 
+        <br>
+
+
+
+        <div id="select">
+
+            <label for="role">Role:</label>
+        <select name="role" id="role">
+            <option value="" selected disabled></option>
+            <option value="admin">Admin</option>
+            <option>User</option>
+            <option value="opt-3">Guest</option>
+        </select>
+
+
+
+
+            
+        </div>
+
 
         <br>
+
+
+        <div id="checkboxes">
+
+            <div>
+                <input type="checkbox" name="terms" id="terms" required>
+                <label for="terms">I have read and agree to the terms and conditions</label>
+            </div>
+            <div>
+                <input type="checkbox" name="news" id="news" checked>
+                <label for="news">I would like to subscribe to the newsletter</label>
+            </div>
+
+        </div>
         <br>
+
+
+        <div>
+
+            <label for="message">Message:</label> <br>
+            <textarea name="message" id="message" cols="30" rows="30" placeholder="Enter message..."></textarea>
+        </div>
+
         <br>
       
 
 
-
-
-
-        
-
-        <button type="button">Submit</button>
+        <button type="button" disabled>Submit</button>
         <input type="submit" value="Submit2">
     
 </body>
