@@ -1,0 +1,23 @@
+h1 {
+
+    color: #008000;
+}
+
+p{
+
+    color: #15155c;
+}
+
+
+small{
+
+    color: rgb(0, 0, 255);
+}
+
+.post p , .sm {
+
+    color: chocolate;
+
+}
+
+
