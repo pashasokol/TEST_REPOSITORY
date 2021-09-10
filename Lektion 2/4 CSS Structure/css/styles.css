@@ -63,3 +63,67 @@ body, html{
 
 
     }
+
+    .card-3 ul li a  {
+
+        text-decoration: none;
+        color: #222;
+        padding: .5rem;
+    }
+
+    .card-3 ul li a:hover  {
+        color: green;
+
+    }
+
+    .card-3 ul li:nth-child(odd){
+        background-color: #bbb;
+    }
+
+    .links {
+
+        margin-top: 2rem;
+    }
+
+    .link {
+        border: 1px solid gray;
+        width: 300px;
+        height: 50px;
+        padding: 1rem;
+        margin-top: 2rem;
+        display: inline-block;
+    }
+
+
+
+    .buttons {
+        margin-top: 2rem;
+
+
+
+    }
+    .jockes-knapp {
+
+        padding: 0.7rem 1.5rem;
+        background-color: #222;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+
+    }
+
+    .jockes-knapp:hover {
+
+        background-color: #aaa;
+        color: #222;
+
+
+    }
+
+    .jockes-knapp:active {
+        background-color:green;
+        /* transform: scale(0.98); */
+    }
