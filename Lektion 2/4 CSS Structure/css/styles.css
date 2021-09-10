@@ -21,7 +21,7 @@ body, html{
     color: #fff;
     font-size: 16px;
     width: 300px;
-    padding: 20px;
+    /* padding: 20px; */
     /* margin: 20px; */
     border: 5px solid blue;
     font-family: 'Times New Roman', Times, serif;
@@ -29,14 +29,37 @@ body, html{
 
 
 .card-1 h2{
-
-
     font-size: 2em;
-
+    background-color: blue;
+    padding: 20px;
 }
-
-
 .card-1 p{
-
     font-size: 1em;
+    margin: 20px;
+    margin-top: 10px;
 }
+
+
+.card-2 {
+
+    border: 1px solid #222;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.card-3 {
+
+    border: 2px dashed #158315;
+    padding: 2rem;
+
+
+}
+.card-3 ul {
+
+    list-style: none;
+    /* list-style: square; */
+
+
+    }
