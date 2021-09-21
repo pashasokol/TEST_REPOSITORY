@@ -1,0 +1,25 @@
+:root {
+
+    --min-färg: #5c135c;
+    --min-färg-hover: #2b042b;
+}
+
+.btn-purple {
+    background-color: var(--min-färg);
+    color: #fff;
+
+}
+
+.btn-purple:hover {
+    background-color: var(--min-färg-hover);
+    color: #fff;
+
+}
+
+.carousel-item {
+    height: calc(100vh - 56px);
+}
+
+.bg-info {
+    background-color: var(--min-färg-hover) !important;
+}
