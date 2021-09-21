@@ -112,6 +112,10 @@ a:hover {
  }
 
 
+ .current a {
+     text-decoration: underline;
+ }
+
 
 
 @media(min-width: 768px){
@@ -137,4 +141,46 @@ a:hover {
 }
 
 
+@media(min-width: 992px){
 
+    .container {
+        max-width: 960px;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+    }
+
+
+
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+}
+
+@media(min-width: 1200px){
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+    }
+
+
+
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+}
