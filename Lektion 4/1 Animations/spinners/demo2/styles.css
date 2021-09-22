@@ -1,0 +1,56 @@
+.spinner {
+    position: relative;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    position: absolute;
+}
+
+.animate {
+    animation: shrink-grow 0.9s infinite;
+}
+
+#c1 {
+    left: -40px;
+    top: 0;
+    animation-delay: 0.3s;
+
+
+}
+#c2 {
+
+    left: 0px;
+    top: 0;
+    animation-delay: 0.6s;
+
+}
+#c3 {
+
+    left: 40px;
+    top: 0;
+    animation-delay: 0.79s;
+    
+
+}
+
+
+@keyframes shrink-grow {
+
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: scale(0.6);
+        background-color: lightseagreen;
+
+    }
+    100% {
+        transform: scale(1);
+
+    }
+}

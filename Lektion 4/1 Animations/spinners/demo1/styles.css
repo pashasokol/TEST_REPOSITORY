@@ -1,0 +1,20 @@
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-bottom-color: green;
+    border-top-color: red;
+
+
+    animation: spinner 1s ease-in-out infinite;
+
+    
+
+}
+
+
+@keyframes spinner {
+    0% { transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
