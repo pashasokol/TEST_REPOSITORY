@@ -91,3 +91,7 @@ console.log(nr1);
 console.log(nr1 ** nr2);
 console.log(nr1 % 3);
 
+
+console.log(typeof datatype);
+datatype = 'en text';
+
