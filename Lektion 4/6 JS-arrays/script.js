@@ -38,4 +38,40 @@ console.log(' ändrat ' +  names);
 
 delete names[2];
 console.log(names.indexOf('Pavel'));
+names[names.indexOf('Sanela')]  = 'Sanna';
+console.log(names);
+
+
+// splice()  - tar bort och / eller lägger till ett värde på en specifik position
+
+names.splice(1, 1);  // ta bort 1 från index plats 1
+names.splice(1, 0, 'Pavels', 'Sanelas');
+names.splice(1,2, 'Pavsan');
+
+console.log(names);
+
+
+// Hur lång är en array
+console.log(names.length);
+
+// Lägga ihop 2 arrayer
+
+newNames = names.concat(['Juk','jacks']);
+console.log(newNames);
+
+
+/*
+newNames.sort();
+console.log(newNames);
+
+newNames.reverse();
+console.log(newNames);
+*/
+
+
+newNames.splice(2,1,'Snack');
+
+console.log(newNames);
+newNames.sort().reverse();
+console.log(newNames);
 
