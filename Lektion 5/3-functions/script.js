@@ -213,3 +213,4 @@ let userName = user.fullname();
 console.log(userName);
 
 
+console.log(user);
