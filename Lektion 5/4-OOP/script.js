@@ -29,41 +29,80 @@
 
 // Prototypes 
 
-function Book(title, author, year) {
-    this.title = title;
-    this.author = author;
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//     this.revised = false;
+
+
+// }
+
+// Book.prototype.summary = function() {
+//     return `${this.title} was written by ${this.author} in ${this.year}`
+// }
+
+
+// Book.prototype.bokAge = function() {
+//     const years = new Date().getFullYear() - this.year;
+
+//     switch(years) {
+//         case 0:
+//             return `${this.title} is less then 1 year old.`
+//         case 1:
+//             return `${this.title} is 1 year old.`  
+//         default:
+//             return `${this.title} is ${years} year old.`         
+
+//     }
+
+
+
+
+// }
+// const book1 = new Book('book 1', 'Pavel', '2011');
+// console.log(book1.summary());
+
+
+// console.log(book1.bokAge());
+
+
+
+// INHERITENCE
+
+function Animal(name) {
+    this.name = name;
+
+}
+
+
+Animal.prototype.makeSound = function() {
+    return `${this.name} makes a generic sound!`
+}
+Animal.prototype.jump = function() {
+    return `${this.name} jumps!`
+}
+
+
+function Dog(name, year) {
+
+    Animal.call(this, name)
     this.year = year;
-    this.revised = false;
-
 
 }
 
-Book.prototype.summary = function() {
-    return `${this.title} was written by ${this.author} in ${this.year}`
+Dog.prototype = Object.create(Animal.prototype);
+
+Dog.prototype.bark = function() {
+    return `${this.name} is barking!`
 }
 
 
-Book.prototype.bokAge = function() {
-    const years = new Date().getFullYear() - this.year;
+const dog = new Dog('Elli', 4);
 
-    switch(years) {
-        case 0:
-            return `${this.title} is less then 1 year old.`
-        case 1:
-            return `${this.title} is 1 year old.`  
-        default:
-            return `${this.title} is ${years} year old.`         
-
-    }
+console.log(dog.makeSound());
+console.log(dog.bark());
 
 
-
-
-}
-const book1 = new Book('book 1', 'Pavel', '2011');
-console.log(book1.summary());
-
-
-console.log(book1.bokAge());
 
 
