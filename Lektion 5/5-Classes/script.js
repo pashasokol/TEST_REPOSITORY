@@ -52,10 +52,12 @@
 //     login() {
 //         this.loggedin = true;
 //         console.log(`${this.firstName} has logged in`)
+//         return this
 //     }
 //     logout() {
 //         this.loggedin = false;
 //         console.log(`${this.firstName} has logged out`)
+//         return this
 //     }
 // }
 
@@ -144,31 +146,97 @@
 
 // SETTER
 
-class Person {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    get fullName() {
-        return `${this.firstName} ${this.lastName}`;
+// class Person {
+//     constructor(firstName, lastName) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+//     get fullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+
+//     set fullName(_value) {
+//         const parts = _value.split(' ');
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+
+//     }
+// }
+
+
+// const p1 = new Person('Pavel','Sakalouski');
+
+// console.log(p1.firstName);
+// console.log(p1.lastName);
+// console.log(p1.fullName);
+
+// p1.fullName = 'Paul Sokolov';
+// console.log(p1.firstName);
+// console.log(p1.lastName);
+// console.log(p1.fullName);
+
+
+
+
+// POLYMORPHISM
+
+// class Monster {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+
+//     attack() {
+//         console.log(`The monster ${this.name} is hitting you!`)
+//     }
+// }
+
+// // const monster = new Monster('monster');
+
+// // monster.attack();
+
+
+// class FireMonster extends Monster {
+
+//     constructor(name) {
+//         super(name)
+
+//     }
+
+//     attack() {
+//         super.attack();
+//         console.log(`${this.name} is also throwing a fireball at you.`)
+//     }
+// }
+
+
+// const fm = new FireMonster('Blazor');
+// console.log(fm)
+// fm.attack();
+
+
+// STATIC CLASSES
+
+class UserService {
+    constructor(uri)  {
+        this.baseUri = uri;
     }
 
-    set fullName(_value) {
-        const parts = _value.split(' ');
-        this.firstName = parts[0];
-        this.lastName = parts[1];
-
+    static signUp(user) {
+        console.log('Registering the user')
+        console.log(user);
     }
+    static signIn(email, password) {
+        console.log(`Signing in the user with ${email} and ${password}`)
+        
+    }
+
 }
 
+// const userService = new UserService();
 
-const p1 = new Person('Pavel','Sakalouski');
+// userService.signUp({firstName: 'Pavel', lastName: 'Sakalouski'});
+// userService.signIn('sokoliklive@gmail.com','12345');
 
-console.log(p1.firstName);
-console.log(p1.lastName);
-console.log(p1.fullName);
-
-p1.fullName = 'Paul Sokolov';
-console.log(p1.firstName);
-console.log(p1.lastName);
-console.log(p1.fullName);
+UserService.signUp({firstName: 'Pavel', lastName: 'Sakalouski'});
+UserService.signIn('sokoliklive@gmail.com','12345');
