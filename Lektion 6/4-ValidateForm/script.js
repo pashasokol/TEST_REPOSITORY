@@ -1,5 +1,7 @@
 const regForm = document.querySelector('#regForm');
 const email = document.querySelector('#email');
+const inputs = document.querySelectorAll('input');
+
 
 console.log(regForm);
 
@@ -39,16 +41,62 @@ const validateEmail = (email)  =>  {
 
 }
 
-console.log(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test('mail@mail.com'));
+
+
+inputs.forEach(input =>  {
+    if(input.type === 'text') {
+
+        input.addEventListener('keyup', () => {
+            validate('#' + input.id)
+        })
+
+        
+    }
+})
+
+
+email.addEventListener('keyup', () => {
+    validateEmail(email);
+})
+
+
+
+
+
 
 regForm.addEventListener('submit', function(e)   {
 
     e.preventDefault();
 
-    validate('#firstName')
-    validate('#lastName')
-    // validate('#email')
-    validateEmail(email);
+    // validate('#firstName')
+    // validate('#lastName')
+    // // validate('#email')
+    // validateEmail(email);
+
+
+
+    for(let i = 0; i < e.currentTarget.length; i++)  {
+        if(e.currentTarget[i].type === 'text') {
+
+            validate('#'+e.currentTarget[i].id);
+        }
+            else 
+            
+                validateEmail(email); 
+            
+
+            
+        
+
+
+
+    }
+
+    if(validate('#firstName') && validate('#lastName') && validateEmail(email)) {
+        console.log('Success')
+    } else {
+        console.log('nope')
+    }
 
 
 
