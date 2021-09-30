@@ -1,0 +1,8 @@
+.bg-dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.focus {
+    outline: 2px solid teal;
+}
