@@ -33,5 +33,88 @@ body, html {
 }
 
 .form-content {
-    padding: 1rem;
+    padding: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: .7rem;
+}
+
+.input-group label,
+.input-group input,
+.input-group small,
+.input-group-check small  {
+    display: block;
+    width: 100%;
+}
+
+
+.input-group input {
+    padding: .5rem;
+    border-radius: .2rem;
+    border: 1px solid #333;
+}
+
+.fa-exclamation-circle {
+    position: absolute;
+    right: .5rem;
+    top: 1.9rem;
+    color: #e61313;
+    visibility: hidden;
+
+}
+
+
+.fa-check-circle {
+    position: absolute;
+    right: .5rem;
+    top: 1.9rem;
+    color: #239207;
+    visibility: hidden;
+}
+
+.input-group small,
+.input-group-check small {
+    color: #e61313;
+    visibility: hidden;
+
+}
+
+.input-group button {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: .5rem;
+    text-transform: uppercase;
+    border: none;
+    margin-top: .6rem;
+    cursor: pointer;
+}
+
+
+.input-group button:hover {
+    background: #474747;
+}
+
+.input-group button:active {
+    transform: scale(.99);
+    background: #242424;
+}
+
+.error input {
+    border: 1px solid #e61313;
+    outline: 1px solid #e61313;
+
+}
+
+.error input:focus {
+    border: 2px solid #ff0000;
+    outline: 1px solid #ff0000;
+
+}
+
+.error .fa-exclamation-circle,
+.error small {
+    visibility: visible;
 }
