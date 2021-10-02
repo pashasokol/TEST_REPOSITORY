@@ -118,3 +118,24 @@ body, html {
 .error small {
     visibility: visible;
 }
+
+.success input {
+    border: 1px solid #239207;
+    outline: 1px solid #239207;
+
+}
+
+
+
+.success .fa-check-circle {
+    visibility: visible;
+
+}
+
+#tac {
+    border: none;
+    outline: none;
+}
+
+
+
