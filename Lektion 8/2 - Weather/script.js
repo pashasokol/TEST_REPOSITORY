@@ -5,6 +5,7 @@ const apiKey = 'f625dca932cb32e7ce600031d7006ef5';
 const form = document.querySelector('#form');
 const input = document.querySelector('#input');
 const city = document.querySelector('.city');
+const wrapper = document.querySelector('.wrapper');
 
 
 const displayResults = data => {
@@ -26,6 +27,35 @@ const displayResults = data => {
     document.querySelector('.hi-low').innerHTML = `${Math.round(data.main.temp_max)}&degC / ${Math.round(data.main.temp_min)}&degC`
 }
 
+const setBg = temp => {
+    if(temp < 5) {
+
+        
+
+        wrapper.classList.remove('bg-orange');
+        wrapper.classList.remove('bg-red');
+        wrapper.classList.add('bg-blue');
+
+    } 
+    
+    else if(temp > 5 && temp < 15){
+
+        wrapper.classList.add('bg-orange');
+        wrapper.classList.remove('bg-red');
+        wrapper.classList.remove('bg-blue');
+
+
+    } else {
+
+        wrapper.classList.remove('bg-orange');
+        wrapper.classList.add('bg-red');
+        wrapper.classList.remove('bg-blue');
+
+
+    }
+
+}
+
 
 
 
@@ -36,8 +66,12 @@ form.addEventListener('submit', e => {
 
     getData(url)
     .then(data => {
-        if(data.cod === 200) {
         console.log(data);
+        setBg(data.main.temp);
+
+
+
+        if(data.cod === 200) {
         displayResults(data);
         input.value = '';
         input.focus();
