@@ -36,10 +36,18 @@ form.addEventListener('submit', e => {
 
     getData(url)
     .then(data => {
+        if(data.cod === 200) {
         console.log(data);
         displayResults(data);
         input.value = '';
         input.focus();
+        } else if(data.cod === '400') {
+            city.innerText = "You must enter a city";
+        } else if(data.cod === '404')  {
+            city.innerText = "Can't find that city";
+        } else {
+            city.innerText = "Unknown error";
+        }
     })
 })
 
@@ -66,9 +74,13 @@ window.addEventListener('load', () => {
             displayResults(data);
         })
 
+    }, (err) => {
+
+        city.innerText = err.message;
+        console.log(err);
     })
 
-}    else {
-    coty.innerText = 'No geolocation data found'
-}
+}    
+    
+
 })
